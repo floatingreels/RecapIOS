@@ -30,18 +30,21 @@ class ViewController: UIViewController {
     
     
     @IBAction func berekenBTW() {
-          
-        if {
-            
-        
-            if var bedrag = Double.init(inputTF.text!){
-                switch btwTypeSC.selectedSegmentIndex {
-                    case 0: bedrag *= 1.21
-                    case 1: bedrag *= 1.12
-                    case 2: bedrag *= 1.06
-                    default: bedrag = 0
+        if var bedrag = Double.init(inputTF.text!){
+            var btw:Double!
+            switch btwTypeSC.selectedSegmentIndex {
+                case 0: btw = 0.21
+                case 1: btw = 0.12
+                case 2: btw = 0.06
+                default: bedrag = 0
             }
+            outputBedragLbl.text = String.init(format: "%.2f", (bedrag + (bedrag * btw)))
+            outputBTWLbl.text = String.init(format: "%.2f", bedrag*btw)
         }
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        inputTF.resignFirstResponder()
     }
 }
 

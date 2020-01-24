@@ -101,7 +101,11 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GFX-QI-fMv" appends="YES" id="oKI-Jq-gyn"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="btwTypeSC" destination="Okx-PX-XdP" id="UzM-ce-rfy"/>
@@ -111,6 +115,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GFX-QI-fMv">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="6AD-3q-mMb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-513" y="-127"/>
         </scene>
