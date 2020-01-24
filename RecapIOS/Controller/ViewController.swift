@@ -9,7 +9,6 @@
 import UIKit
 
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var inputTF: UITextField!
@@ -25,9 +24,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    
-    
     
     @IBAction func berekenBTW() {
         if var bedrag = Double.init(inputTF.text!){
